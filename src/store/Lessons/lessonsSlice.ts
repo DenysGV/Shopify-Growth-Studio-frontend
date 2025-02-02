@@ -5,7 +5,7 @@ import ILesson from "../../types/ILesson";
 
 export const fetchArticles = createAsyncThunk<ILesson[]>('articles/fetchArticles', async (_, { rejectWithValue }) => {
    try {
-      const response = await axios.get<ILesson[]>('http://localhost:8000/all-lessons');
+      const response = await axios.get<ILesson[]>('https://shopify-growth-studio-backend.onrender.com/all-lessons');
       return response.data;
    } catch (error: any) {
       return rejectWithValue(error.response?.data?.message || 'Ошибка запроса');

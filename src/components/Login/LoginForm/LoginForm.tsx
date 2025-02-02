@@ -20,7 +20,7 @@ const LoginForm = () => {
 
    const sendLogin = async () => {
       try {
-         const response = await axios.post('http://localhost:8000/login', { email, password }, { headers: { 'Content-Type': 'application/json' } });
+         const response = await axios.post('https://shopify-growth-studio-backend.onrender.com/login', { email, password }, { headers: { 'Content-Type': 'application/json' } });
 
          if (!response.data.error) {
             dispatch(login(response.data.userInfo))

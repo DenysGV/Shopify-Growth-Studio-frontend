@@ -32,7 +32,7 @@ const LectureContent = () => {
 
    const requestHandler = async (id: number) => {
       try {
-         const response = await axios.get<ILesson>(`http://localhost:8000/lesson/${id}`);
+         const response = await axios.get<ILesson>(`https://shopify-growth-studio-backend.onrender.com/lesson/${id}`);
 
          if (response.data) {
             setLesson(response.data);

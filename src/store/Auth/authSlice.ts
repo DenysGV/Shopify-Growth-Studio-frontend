@@ -9,7 +9,7 @@ export const toggleCompleted = createAsyncThunk<ILectureCompleted[], ILectureTog
    async (lessonToAdd, { rejectWithValue }) => {
       try {
          const response = await axios.post<ILectureCompleted[]>(
-            'http://localhost:8000/toggle-completed',
+            'https://shopify-growth-studio-backend.onrender.com/toggle-completed',
             lessonToAdd
          );
          return response.data;

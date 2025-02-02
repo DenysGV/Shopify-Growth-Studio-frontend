@@ -18,7 +18,7 @@ const ContactForm = () => {
       event.preventDefault(); // Останавливаем перезагрузку страницы
 
       try {
-         const response = await axios.post('http://localhost:8000/send-message', { name, phone, email, tgName }, { headers: { 'Content-Type': 'application/json' } })
+         const response = await axios.post('https://shopify-growth-studio-backend.onrender.com/send-message', { name, phone, email, tgName }, { headers: { 'Content-Type': 'application/json' } })
 
          if (!response.data.error) {
             setResult({

@@ -12,7 +12,7 @@ const useTimeOnSite = (userId: string) => {
       const totalTime: number = timeDiff / 3600000
 
       try {
-         await axios.post("http://localhost:8000/user-time", {
+         await axios.post("https://shopify-growth-studio-backend.onrender.com/user-time", {
             userId,
             timeSpent: totalTime, // в часах
          });
