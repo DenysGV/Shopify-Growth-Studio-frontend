@@ -1,5 +1,3 @@
-import React from 'react'
-
 const CourseTitle = () => {
    return (
       <div className='flex bg-secondary rounded-2xl w-2/12 p-4 max-lg:hidden'>

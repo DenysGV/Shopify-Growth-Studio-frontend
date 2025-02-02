@@ -1,4 +1,3 @@
-import React from 'react'
 import CourseMainListItem from '../CourseMainListItem/CourseMainListItem'
 import ICourseMainListItem from '../../../../types/ICourseMainListItem'
 

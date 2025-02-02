@@ -1,4 +1,3 @@
-import React from 'react'
 import Navbar from '../components/Navbar/Navbar'
 import Hero from '../components/Home/HeroSection/Hero/Hero'
 import Banners from '../components/Home/BannersSection/Banners/Banners'

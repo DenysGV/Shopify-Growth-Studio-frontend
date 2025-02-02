@@ -1,4 +1,3 @@
-import React from 'react'
 import Title from '../../../Ui/Title/Title'
 import SpecialItem from '../SpecialItem/SpecialItem'
 import ISpecialItem from '../../../../types/ISpecialItem'

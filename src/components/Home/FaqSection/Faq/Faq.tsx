@@ -1,4 +1,3 @@
-import React from 'react'
 import Title from '../../../Ui/Title/Title'
 import FaqItem from '../FaqItem/FaqItem'
 import IFaqItem from '../../../../types/IFaqItem'

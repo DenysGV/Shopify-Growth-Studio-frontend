@@ -1,4 +1,3 @@
-import React from 'react'
 import IArticleItem from '../../../types/IArticleItem'
 
 const SubtitleArticle = ({ children }: IArticleItem) => {

@@ -1,4 +1,3 @@
-import React from 'react'
 import ICourseMainListItem from '../../../../types/ICourseMainListItem'
 
 const CourseFillingMainItem = ({ text }: ICourseMainListItem) => {

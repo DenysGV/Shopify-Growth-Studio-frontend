@@ -1,4 +1,3 @@
-import React from 'react'
 import ITitle from '../../../types/ITitle'
 
 const Title = ({ children, width, glow, align }: ITitle) => {

@@ -1,5 +1,3 @@
-import React from 'react'
-import ICourseMainList from '../../../../types/ICourseMainListItem'
 import CourseMainList from '../CourseMainList/CourseMainList'
 import CourseMainFooter from '../CourseMainFooter/CourseMainFooter'
 

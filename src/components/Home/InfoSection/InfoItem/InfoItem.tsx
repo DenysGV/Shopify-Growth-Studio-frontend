@@ -1,4 +1,3 @@
-import React from 'react'
 import IInfoItem from '../../../../types/IInfoItem'
 
 const InfoItem = ({ text, index }: IInfoItem) => {

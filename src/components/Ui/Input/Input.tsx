@@ -1,4 +1,3 @@
-import React from 'react'
 import IInput from '../../../types/IInput'
 
 const Input = ({ type, name, setValue, placeholder }: IInput) => {

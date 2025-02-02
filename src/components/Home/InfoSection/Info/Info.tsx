@@ -1,4 +1,3 @@
-import React from 'react'
 import Title from '../../../Ui/Title/Title'
 import InfoItem from '../InfoItem/InfoItem'
 

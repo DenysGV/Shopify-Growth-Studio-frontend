@@ -1,4 +1,3 @@
-import React from 'react'
 import ISpecialItem from '../../../../types/ISpecialItem'
 
 const SpecialItem = ({ title, paragraph, index }: ISpecialItem) => {

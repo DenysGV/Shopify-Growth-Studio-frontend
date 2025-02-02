@@ -1,4 +1,3 @@
-import React from 'react'
 import CourseFillingHeader from '../CourseFillingHeader/CourseFillingHeader'
 import CourseFillingMain from '../CourseFillingMain/CourseFillingMain'
 

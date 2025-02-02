@@ -1,4 +1,3 @@
-import React from 'react'
 import IReviewsItem from '../../../../types/IReviewsItem'
 
 const ReviewsItem = ({ index }: IReviewsItem) => {

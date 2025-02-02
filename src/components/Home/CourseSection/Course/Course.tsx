@@ -1,4 +1,3 @@
-import React from 'react'
 import CourseTitle from '../CourseTitle/CourseTitle'
 import CourseMain from '../CourseMain/CourseMain'
 import CourseFilling from '../CourseFilling/CourseFilling'
