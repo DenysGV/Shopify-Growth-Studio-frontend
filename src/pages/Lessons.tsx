@@ -16,7 +16,7 @@ const Lessons = () => {
 
    useEffect(() => {
       if (!auth.isAuth) {
-         moveToPage('')
+         moveToPage('Login')
       }
    }, [])
 

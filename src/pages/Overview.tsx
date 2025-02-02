@@ -19,7 +19,7 @@ const Overview = () => {
 
    useEffect(() => {
       if (!auth.isAuth) {
-         moveToPage('')
+         moveToPage('Login')
       }
 
       dispatch(fetchArticles())

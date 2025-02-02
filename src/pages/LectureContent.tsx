@@ -51,7 +51,7 @@ const LectureContent = () => {
 
    useEffect(() => {
       if (!auth.isAuth) {
-         moveToPage('')
+         moveToPage('Login')
       }
 
       if (lessonId) {

@@ -27,6 +27,7 @@ createRoot(document.getElementById('root')!).render(
             <Route path="Lectures" element={<Overview />} />
             <Route path="Lectures/Lessons" element={<Lessons />} />
             <Route path="Lectures/Lessons/:lessonId" element={<LectureContent />} />
+            <Route path="*" element={<Home />} />
           </Routes>
         </BrowserRouter>
       </PersistGate>
