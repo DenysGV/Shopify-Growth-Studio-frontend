@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Input from '../../../Ui/Input/Input'
 import Button from '../../../Ui/Button/Button'
 import axios from 'axios'
