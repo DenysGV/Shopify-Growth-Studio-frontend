@@ -9,9 +9,9 @@ const CourseMainFooter = () => {
          <div>
             <div className='flex items-center gap-2'>
                <div className='text-base p-1 rounded-xl bg-secondary'>-50%</div>
-               <div className='text-xl text-white opacity-70 decoration-0 line-through'>28 $</div>
+               <div className='text-xl text-white opacity-70 decoration-0 line-through'>54 $</div>
             </div>
-            <p className='text-3xl text-white'>$14 <span className='text-sm'>/week</span></p>
+            <p className='text-3xl text-white text-right max-[425px]:text-left'>$27</p>
          </div>
       </div>
    )
