@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/",
+  base: "./", // Исправьте "/" на "./" (чтобы пути были относительными)
   build: {
-    outDir: 'build',  // Указываем, что нужно выводить в папку build
-  },
+    outDir: 'build',
+    assetsDir: 'assets', // Папка для ассетов
+  }
 })
