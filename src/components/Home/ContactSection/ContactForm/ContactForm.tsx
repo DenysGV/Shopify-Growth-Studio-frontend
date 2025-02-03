@@ -3,7 +3,7 @@ import Input from '../../../Ui/Input/Input'
 import Button from '../../../Ui/Button/Button'
 import axios from 'axios'
 import ILoginResult from '../../../../types/ILoginResult'
-import { trackLead } from '../../../../utils/pixel'
+import { fbq } from 'react-facebook-pixel'
 
 const ContactForm = () => {
    const [name, setName] = useState<string>('')
@@ -29,7 +29,7 @@ const ContactForm = () => {
          const response = await axios.post('https://shopify-growth-studio-backend.onrender.com/send-message', { name, phone, email, tgName }, { headers: { 'Content-Type': 'application/json' } })
 
          if (!response.data.error) {
-            trackLead();
+            fbq('track', 'Lead');
             setResult({
                loading: false,
                error: false,
