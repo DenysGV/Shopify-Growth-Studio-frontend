@@ -37,7 +37,7 @@ const ContactForm = () => {
             })
          }
       } catch (error: any) {
-         if (error.response.data.message) {
+         if (error.response?.data?.message) {
             setResult({ loading: false, error: true, message: `${error.response.data.message}` });
          } else {
             setResult({ loading: false, error: true, message: 'Щось пішло не так, спробуйте ще раз' });
