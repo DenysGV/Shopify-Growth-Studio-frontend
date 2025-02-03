@@ -3,6 +3,7 @@ import Input from '../../../Ui/Input/Input'
 import Button from '../../../Ui/Button/Button'
 import axios from 'axios'
 import ILoginResult from '../../../../types/ILoginResult'
+import { trackLead } from '../../../../utils/pixel'
 
 const ContactForm = () => {
    const [name, setName] = useState<string>('')
@@ -10,6 +11,7 @@ const ContactForm = () => {
    const [email, setEmail] = useState<string>('')
    const [tgName, settgName] = useState<string>('')
    const [result, setResult] = useState<ILoginResult>({
+      loading: false,
       error: false,
       message: '',
    })
@@ -17,20 +19,28 @@ const ContactForm = () => {
    const handleSubmit = async (event: React.FormEvent) => {
       event.preventDefault(); // Останавливаем перезагрузку страницы
 
+      if (result.loading) {
+         return
+      }
+
+      setResult(prev => ({ ...prev, loading: true }))
+
       try {
          const response = await axios.post('https://shopify-growth-studio-backend.onrender.com/send-message', { name, phone, email, tgName }, { headers: { 'Content-Type': 'application/json' } })
 
          if (!response.data.error) {
+            trackLead();
             setResult({
+               loading: false,
                error: false,
                message: response.data.message,
             })
          }
       } catch (error: any) {
          if (error.response.data.message) {
-            setResult({ error: true, message: `${error.response.data.message}` });
+            setResult({ loading: false, error: true, message: `${error.response.data.message}` });
          } else {
-            setResult({ error: true, message: 'Щось пішло не так, спробуйте ще раз' });
+            setResult({ loading: false, error: true, message: 'Щось пішло не так, спробуйте ще раз' });
          }
       }
    };

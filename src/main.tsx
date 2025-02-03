@@ -13,7 +13,6 @@ import Lessons from './pages/Lessons';
 import { PersistGate } from 'redux-persist/integration/react';
 import LectureContent from './pages/LectureContent';
 
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={store}>

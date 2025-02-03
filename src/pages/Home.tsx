@@ -8,8 +8,14 @@ import Faq from '../components/Home/FaqSection/Faq/Faq'
 import Course from '../components/Home/CourseSection/Course/Course'
 import Contact from '../components/Home/ContactSection/Contact/Contact'
 import Footer from '../components/Footer/Footer'
+import { useEffect } from 'react'
+import { initFacebookPixel } from '../utils/pixel'
 
 const Home = () => {
+   useEffect(() => {
+      initFacebookPixel();
+   }, []);
+
    return (
       <>
          <Navbar />
