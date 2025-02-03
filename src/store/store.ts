@@ -8,7 +8,6 @@ import rootReducer from "./reducers";
 const persistConfig = {
    key: "root",
    storage,
-   whitelist: ["auth"], // сохраняем только auth в хранилище
 };
 
 // Создаем персистентный редьюсер для auth
