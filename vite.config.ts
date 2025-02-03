@@ -3,9 +3,16 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: "./", // Исправьте "/" на "./" (чтобы пути были относительными)
+  base: "./",  // Важно для правильных путей на Vercel
   build: {
     outDir: 'build',
-    assetsDir: 'assets', // Папка для ассетов
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        entryFileNames: 'assets/index-[hash].js',
+        chunkFileNames: 'assets/chunk-[hash].js',
+        assetFileNames: 'assets/asset-[hash].[ext]'
+      }
+    }
   }
 })
