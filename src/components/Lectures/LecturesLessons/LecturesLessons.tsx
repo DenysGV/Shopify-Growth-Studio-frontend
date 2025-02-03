@@ -1,20 +1,10 @@
-import { useEffect } from "react";
-import useAppDispatch from "../../../hooks/useAppDispatch";
 import useAppSelector from "../../../hooks/useAppSelector";
-import { fetchArticles } from "../../../store/Lessons/lessonsSlice";
 import ILecturesPreviewMenu from "../LecturesUI/LecturePreviewMenu/LecturePreviewMenu"
 import LecturesPreviewList from "../LecturesUI/LecturesPreviewList/LecturesPreviewList";
 
 const LecturesLessons = () => {
    const lessons = useAppSelector((state) => state.root.lessons.items);
    const user = useAppSelector((state) => state.root.auth.user);
-   const dispatch = useAppDispatch()
-
-   useEffect(() => {
-      if (!lessons.length) {
-         dispatch(fetchArticles())
-      }
-   }, [dispatch])
 
    return (
       <div className='w-10/12 m-4 bg-primary rounded-2xl p-7 max-lg:w-full max-sm:p-2.5 max-sm:m-2'>

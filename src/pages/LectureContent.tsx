@@ -8,7 +8,7 @@ import Footer from '../components/Footer/Footer'
 import LecturesSidebar from '../components/Lectures/LecturesSidebar/LecturesSidebar'
 import useTimeOnSite from '../hooks/useTimeOnSite'
 import useAppSelector from '../hooks/useAppSelector'
-// import useNavigation from '../hooks/useNavigation'
+import useNavigation from '../hooks/useNavigation'
 import LectureParagraph from '../components/Lectures/LecturesUI/LectureParagraph/LectureParagraph'
 import LecturesMenu from '../components/Lectures/LecturesUI/LecturesMenu/LecturesMenu'
 import ILecturesItem from '../components/Lectures/LecturesUI/ILecturesList/ILecturesList'
@@ -17,7 +17,7 @@ import LecturesSubtitle from '../components/Lectures/LecturesUI/LectureSubtitle/
 const LectureContent = () => {
    const [error, setError] = useState(false)
    const [lesson, setLesson] = useState<ILesson | null>(null);
-   // const { moveToPage } = useNavigation();
+   const { moveToPage } = useNavigation();
    const auth = useAppSelector((state) => state.root.auth);
 
    const { lessonId } = useParams<{ lessonId?: string }>();
@@ -50,9 +50,9 @@ const LectureContent = () => {
    }
 
    useEffect(() => {
-      // if (!auth.isAuth) {
-      //    moveToPage('Login')
-      // }
+      if (!auth.isAuth) {
+         moveToPage('Login')
+      }
 
       if (lessonId) {
          setError(false);
