@@ -7,7 +7,10 @@ const CourseMainList = () => {
          text: 'практичні завдання',
       },
       {
-         text: '24/7 підтримка',
+         text: 'high-conversion магазин',
+      },
+      {
+         text: 'winner product формула',
       },
    ]
 
