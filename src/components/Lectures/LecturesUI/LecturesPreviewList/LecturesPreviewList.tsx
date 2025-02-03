@@ -35,7 +35,7 @@ const LecturesPreviewList = ({ children, id, linkType, completed }: ILecturesPre
    }
 
    const clickHandler = () => {
-      moveToPage(`Lectures/${linkType}/${id}`)
+      moveToPage(`${linkType}/${id}`)
    }
 
    return (
