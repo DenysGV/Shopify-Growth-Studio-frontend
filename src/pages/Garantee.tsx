@@ -19,7 +19,7 @@ const Garantee = () => {
                Гарантія повернення
             </TitleArticle>
             <ParagraphArticle>
-               Ми гарантуємо повне повернення коштів за придбаний на сайті voodooecom.com інформаційний продукт/послугу.
+               Ми гарантуємо повне повернення коштів за придбаний на сайті shopify-growth-studio.com інформаційний продукт/послугу.
             </ParagraphArticle>
             <SubtitleArticle>
                Тривалість гарантії
