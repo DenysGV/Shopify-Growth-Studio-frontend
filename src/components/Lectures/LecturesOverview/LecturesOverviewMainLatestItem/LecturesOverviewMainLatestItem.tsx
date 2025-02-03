@@ -5,7 +5,7 @@ const LecturesOverviewMainLatestItem = ({ title, lectureId }: ILatestItem) => {
    const { moveToPage } = useNavigation()
 
    const clickHandler = () => {
-      moveToPage(`Lectures/lessons/${lectureId}`)
+      moveToPage(`lessons/${lectureId}`)
    }
 
    return (

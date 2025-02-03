@@ -10,7 +10,7 @@ const LecturesSidebarMenu = () => {
       },
       {
          text: 'Уроки',
-         link: 'Lectures/lessons',
+         link: 'lessons',
          id: 2,
       },
    ]
