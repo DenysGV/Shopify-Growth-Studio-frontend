@@ -23,7 +23,7 @@ const ContactForm = () => {
          return
       }
 
-      setResult(prev => ({ ...prev, loading: true }))
+      setResult({ error: false, message: '', loading: true })
 
       try {
          const response = await axios.post('https://shopify-growth-studio-backend.onrender.com/send-message', { name, phone, email, tgName }, { headers: { 'Content-Type': 'application/json' } })
