@@ -25,8 +25,8 @@ createRoot(document.getElementById('root')!).render(
             <Route path="Policy" element={<Policy />} />
             <Route path="Garantee" element={<Garantee />} />
             <Route path="Lectures" element={<Overview />} />
-            <Route path="Lectures/Lessons" element={<Lessons />} />
-            <Route path="Lectures/Lessons/:lessonId" element={<LectureContent />} />
+            <Route path="Lessons" element={<Lessons />} />
+            <Route path="Lessons/:lessonId" element={<LectureContent />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </BrowserRouter>
