@@ -14,7 +14,7 @@ const ContactForm = () => {
       loading: false,
       error: false,
       message: '',
-   })
+   });
 
    const handleSubmit = async (event: React.FormEvent) => {
       event.preventDefault(); // Останавливаем перезагрузку страницы
@@ -23,7 +23,7 @@ const ContactForm = () => {
          return
       }
 
-      setResult({ error: false, message: '', loading: true })
+      setResult(prev => ({ ...prev, loading: true }))
 
       try {
          const response = await axios.post('https://shopify-growth-studio-backend.onrender.com/send-message', { name, phone, email, tgName }, { headers: { 'Content-Type': 'application/json' } })
@@ -37,11 +37,11 @@ const ContactForm = () => {
             })
          }
       } catch (error: any) {
-         if (error.response?.data?.message) {
-            setResult({ loading: false, error: true, message: `${error.response.data.message}` });
-         } else {
-            setResult({ loading: false, error: true, message: 'Щось пішло не так, спробуйте ще раз' });
-         }
+         setResult({
+            loading: false,
+            error: true,
+            message: error.response?.data?.message || 'Щось пішло не так, спробуйте ще раз'
+         });
       }
    };
 
