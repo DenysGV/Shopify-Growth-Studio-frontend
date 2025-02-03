@@ -3,11 +3,11 @@ import Footer from "../components/Footer/Footer"
 import LecturesLessons from "../components/Lectures/LecturesLessons/LecturesLessons"
 import LecturesSidebar from "../components/Lectures/LecturesSidebar/LecturesSidebar"
 import useAppSelector from "../hooks/useAppSelector";
-import useNavigation from "../hooks/useNavigation";
+// import useNavigation from "../hooks/useNavigation";
 import useTimeOnSite from "../hooks/useTimeOnSite";
 
 const Lessons = () => {
-   const { moveToPage } = useNavigation();
+   // const { moveToPage } = useNavigation();
    const auth = useAppSelector((state) => state.root.auth);
 
    if (auth.user?._id) {
@@ -15,9 +15,9 @@ const Lessons = () => {
    }
 
    useEffect(() => {
-      if (!auth.isAuth) {
-         moveToPage('Login')
-      }
+      // if (!auth.isAuth) {
+      //    moveToPage('Login')
+      // }
    }, [])
 
 

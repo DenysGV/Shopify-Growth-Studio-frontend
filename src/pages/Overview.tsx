@@ -3,13 +3,13 @@ import Footer from "../components/Footer/Footer"
 import LecturesOverview from "../components/Lectures/LecturesOverview/LecturesOverview"
 import LecturesSidebar from "../components/Lectures/LecturesSidebar/LecturesSidebar"
 import useAppSelector from "../hooks/useAppSelector";
-import useNavigation from "../hooks/useNavigation";
+// import useNavigation from "../hooks/useNavigation";
 import useTimeOnSite from "../hooks/useTimeOnSite";
 import useAppDispatch from "../hooks/useAppDispatch";
 import { fetchArticles } from "../store/Lessons/lessonsSlice";
 
 const Overview = () => {
-   const { moveToPage } = useNavigation();
+   // const { moveToPage } = useNavigation();
    const auth = useAppSelector((state) => state.root.auth);
    const dispatch = useAppDispatch()
 
@@ -18,9 +18,9 @@ const Overview = () => {
    }
 
    useEffect(() => {
-      if (!auth.isAuth) {
-         moveToPage('Login')
-      }
+      // if (!auth.isAuth) {
+      //    moveToPage('Login')
+      // }
 
       dispatch(fetchArticles())
    }, [])
