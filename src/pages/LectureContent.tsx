@@ -45,22 +45,21 @@ const LectureContent = () => {
 
    }
 
-   useEffect(() => {
-      if (!lessonIndex) {
-         setError(true);
-         return;
-      }
-
-      setError(false);
-      setLesson(null);
-      requestHandler(lessonIndex)
-   }, [lessonIndex]);
+   if (auth.user?._id) {
+      useTimeOnSite(auth.user?._id)
+   }
 
    useEffect(() => {
-      if (auth.user?._id) {
-         useTimeOnSite(auth.user._id);
+      // if (!auth.isAuth) {
+      //    moveToPage('Login')
+      // }
+
+      if (lessonId) {
+         setError(false);
+         setLesson(null)
+         requestHandler(lessonIndex);
       }
-   }, [auth.user?._id]);
+   }, [lessonId]);
 
    return (
       <div className="flex flex-col min-h-screen relative">
@@ -75,7 +74,7 @@ const LectureContent = () => {
             <div className='w-10/12 m-4 bg-primary rounded-2xl p-7 max-lg:w-full max-sm:p-2.5 max-sm:m-2'>
                {error && <p className='text-2xl text-red-500 pb-10'>Урок не знайдено</p>}
                {lesson &&
-                  <LectureTitle>
+                  <LectureTitle >
                      {lesson.title}
                   </LectureTitle>
                }
@@ -113,5 +112,6 @@ const LectureContent = () => {
       </div>
    )
 }
+
 
 export default LectureContent
