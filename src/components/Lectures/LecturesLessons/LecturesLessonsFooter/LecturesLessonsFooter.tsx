@@ -6,10 +6,10 @@ const LecturesLessonsFooter = ({ id }: ILecturesLessonsFooter) => {
    const { moveToPage } = useNavigation();
 
    const prevHandler = () => {
-      moveToPage(`Lessons/${id <= 1 ? 1 : --id}`)
+      moveToPage(`${id <= 1 ? 1 : --id}`)
    }
    const nextHandler = () => {
-      moveToPage(`Lessons/${id <= 0 ? 1 : ++id}`)
+      moveToPage(`${id <= 0 ? 1 : ++id}`)
    }
 
    return (
