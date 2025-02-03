@@ -9,7 +9,7 @@ const CourseMain = () => {
          </div>
          <div><img src="/images/courseBag.png" alt="Bag" className='absolute -top-2 right-0 max-sm:hidden w-48' /></div>
          <div>
-            <h4 className='text-2xl text-white pb-4'>Shopify Дропшипінг: <span className='text-secondary'>Шлях до успіху</span></h4>
+            <h4 className='text-2xl text-white pb-4 max-sm:py-4'>Shopify Дропшипінг: <span className='text-secondary'>Шлях до успіху</span></h4>
             <CourseMainList />
             <CourseMainFooter />
          </div>
