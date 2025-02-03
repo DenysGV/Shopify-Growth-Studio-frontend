@@ -6,13 +6,5 @@ export default defineConfig({
   base: "./",  // Важно для правильных путей на Vercel
   build: {
     outDir: 'build',
-    assetsDir: 'assets',
-    rollupOptions: {
-      output: {
-        entryFileNames: 'assets/index-[hash].js',
-        chunkFileNames: 'assets/chunk-[hash].js',
-        assetFileNames: 'assets/asset-[hash].[ext]'
-      }
-    }
   }
 })
