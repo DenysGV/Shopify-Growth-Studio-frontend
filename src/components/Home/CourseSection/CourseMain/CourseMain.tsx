@@ -7,9 +7,9 @@ const CourseMain = () => {
          <div className=''>
             <h5 className='text-white text-sm border-b-2 border-secondary pb-1 w-fit'>Курс по shopify</h5>
          </div>
-         <div><img src="/images/courseBag.png" alt="Bag" className='absolute -top-2 right-0 max-sm:hidden' /></div>
+         <div><img src="/images/courseBag.png" alt="Bag" className='absolute -top-2 right-0 max-sm:hidden w-48' /></div>
          <div>
-            <h4 className='text-2xl text-white pb-4'>дропшипинг з 0 до <span className='text-secondary'>1000$</span></h4>
+            <h4 className='text-2xl text-white pb-4'>Shopify Дропшипінг: <span className='text-secondary'>Шлях до успіху</span></h4>
             <CourseMainList />
             <CourseMainFooter />
          </div>
