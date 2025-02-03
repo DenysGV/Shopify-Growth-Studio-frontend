@@ -10,7 +10,6 @@ import Contact from '../components/Home/ContactSection/Contact/Contact'
 import Footer from '../components/Footer/Footer'
 
 const Home = () => {
-
    return (
       <>
          <Navbar />
