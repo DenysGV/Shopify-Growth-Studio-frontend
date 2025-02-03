@@ -11,15 +11,22 @@ const LoginForm = () => {
    const [password, setPassword] = useState<string>('')
    const [email, setEmail] = useState<string>('')
    const [result, setResult] = useState<ILoginResult>({
+      loading: false,
       error: false,
       message: '',
-   })
+   });
 
    const { moveToPage } = useNavigation();
    const dispatch = useAppDispatch()
 
    const sendLogin = async () => {
       try {
+         if (result.loading) {
+            return
+         }
+
+         setResult(prev => ({ ...prev, loading: true }))
+
          const response = await axios.post('https://shopify-growth-studio-backend.onrender.com/login', { email, password }, { headers: { 'Content-Type': 'application/json' } });
 
          if (!response.data.error) {
@@ -28,9 +35,9 @@ const LoginForm = () => {
          }
       } catch (error: any) {
          if (error.response.data.message) {
-            setResult({ error: true, message: `${error.response.data.message}` });
+            setResult({ loading: false, error: true, message: `${error.response.data.message}` });
          } else {
-            setResult({ error: true, message: 'Щось пішло не так, спробуйте ще раз' });
+            setResult({ loading: false, error: true, message: 'Щось пішло не так, спробуйте ще раз' });
          }
       }
    }

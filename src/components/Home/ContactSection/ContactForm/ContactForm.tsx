@@ -19,9 +19,9 @@ const ContactForm = () => {
    const handleSubmit = async (event: React.FormEvent) => {
       event.preventDefault(); // Останавливаем перезагрузку страницы
 
-      // if (result.loading) {
-      //    return
-      // }
+      if (result.loading) {
+         return
+      }
 
       setResult(prev => ({ ...prev, loading: true }))
 
