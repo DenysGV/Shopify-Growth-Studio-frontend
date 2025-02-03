@@ -6,10 +6,9 @@ import rootReducer from "./reducers";
 
 // Конфигурация персистентного хранилища
 const persistConfig = {
-   key: "root",
+   key: 'root',
    storage,
-   whitelist: ["auth"], // сохраняем только auth в хранилище
-};
+}
 
 // Создаем персистентный редьюсер для auth
 const persistedRootReducer = persistReducer(persistConfig, rootReducer);
