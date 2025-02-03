@@ -1,3 +1,3 @@
 export default interface ILecturesLessonsFooter {
-   id: number
+   id: string
 }
