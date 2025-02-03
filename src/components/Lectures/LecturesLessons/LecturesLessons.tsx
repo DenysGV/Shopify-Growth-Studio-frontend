@@ -16,7 +16,7 @@ const LecturesLessons = () => {
                );
 
                return (
-                  <LecturesPreviewList key={item.id} id={item.id} linkType="lessons" completed={isCompleted ? isCompleted : false}>
+                  <LecturesPreviewList key={item.id} id={item.id} completed={isCompleted ? isCompleted : false}>
                      {item.title}
                   </LecturesPreviewList>
                );

@@ -5,7 +5,7 @@ import useAppDispatch from "../../../../hooks/useAppDispatch"
 import { toggleCompleted } from "../../../../store/Auth/authSlice"
 import useAppSelector from "../../../../hooks/useAppSelector"
 
-const LecturesPreviewList = ({ children, id, linkType, completed }: ILecturesPreviewList) => {
+const LecturesPreviewList = ({ children, id, completed }: ILecturesPreviewList) => {
    const [active, setActive] = useState<boolean>(completed)
    const [hover, setHover] = useState<boolean>(false)
    const dispatch = useAppDispatch()
@@ -35,7 +35,7 @@ const LecturesPreviewList = ({ children, id, linkType, completed }: ILecturesPre
    }
 
    const clickHandler = () => {
-      moveToPage(`${linkType}/${id}`)
+      moveToPage(`${id}`)
    }
 
    return (
