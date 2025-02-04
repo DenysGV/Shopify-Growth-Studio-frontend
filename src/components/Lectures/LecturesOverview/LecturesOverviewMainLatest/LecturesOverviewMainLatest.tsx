@@ -12,7 +12,7 @@ const LecturesOverviewMainLatest = () => {
                latestItems ?
                   latestItems.length > 0 ?
                      [...latestItems].sort((a, b) => a.lectureId + b.lectureId).map((item, index) => (index < 4 && <LecturesOverviewMainLatestItem {...item} />)) :
-                     <p className="text-lg text-white max-sm:text-sm">У вас немає поки що ніякої активності</p>
+                     <p className="text-lg text-white max-sm:text-sm opacity-80">У вас немає поки що ніякої активності</p>
                   :
                   <p className="text-lg text-red-500 max-sm:text-sm">Щось пішло не так</p>
             }

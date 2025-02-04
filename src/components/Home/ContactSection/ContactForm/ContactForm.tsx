@@ -16,18 +16,18 @@ const ContactForm = () => {
       message: '',
    });
 
-   const handleSubmit = async (event: React.FormEvent) => {
-      event.preventDefault(); // Останавливаем перезагрузку страницы
-
-      if (result.loading) {
-         return
-      }
-
-      setResult(prev => ({ ...prev, loading: true }))
-
+   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       try {
-         const response = await axios.post('https://shopify-growth-studio-backend.onrender.com/send-message', { name, phone, email, tgName }, { headers: { 'Content-Type': 'application/json' } })
+         event.preventDefault(); // Останавливаем перезагрузку страницы
 
+         if (result.loading) {
+            return
+         }
+
+         setResult(prev => ({ ...prev, loading: true }))
+         event.currentTarget.reset()
+
+         const response = await axios.post('https://shopify-growth-studio-backend.onrender.com/send-message', { name, phone, email, tgName }, { headers: { 'Content-Type': 'application/json' } });
 
          if (!response.data.error) {
             ReactPixel.fbq('track', 'Lead');

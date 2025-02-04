@@ -19,13 +19,16 @@ const LoginForm = () => {
    const { moveToPage } = useNavigation();
    const dispatch = useAppDispatch()
 
-   const sendLogin = async () => {
+   const sendLogin = async (event: React.FormEvent<HTMLFormElement>) => {
       try {
+         event.preventDefault();
+
          if (result.loading) {
             return
          }
 
          setResult(prev => ({ ...prev, loading: true }))
+         event.currentTarget.reset()
 
          const response = await axios.post('https://shopify-growth-studio-backend.onrender.com/login', { email, password }, { headers: { 'Content-Type': 'application/json' } });
 
@@ -43,11 +46,11 @@ const LoginForm = () => {
    }
 
    return (
-      <form className="flex flex-col gap-5 items-center" onSubmit={(e) => e.preventDefault()}>
+      <form className="flex flex-col gap-5 items-center" onSubmit={sendLogin}>
          <Input type="email" name="email" setValue={setEmail} placeholder="E-MAIL" />
          <Input type="password" name="password" setValue={setPassword} placeholder="Пароль" />
          <p className={`text-sm text-center text-red-500 ${result.error ? 'block' : 'hidden'}`}>{result.message}</p>
-         <Button type="filled" text="увійти" onClick={() => { sendLogin() }} />
+         <Button type="filled" text="увійти" onClick={() => { }} />
       </form>
    )
 }

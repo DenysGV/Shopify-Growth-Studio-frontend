@@ -8,7 +8,6 @@ const Footer = () => {
          <div><img src="/images/logo.png" alt="logo" className=' cursor-pointer' onClick={() => { moveToPage('') }} /></div>
          <div>
             <p className='text-base text-right text-white cursor-pointer font-medium max-sm:text-center' onClick={() => { moveToPage('Policy') }}>ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ</p>
-            <p className='text-base text-right text-white cursor-pointer font-medium pt-2 max-sm:text-center' onClick={() => { moveToPage('Garantee') }}>ГАРАНТІЯ ПОВЕРНЕННЯ</p>
          </div>
       </footer>
    )

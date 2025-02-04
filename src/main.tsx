@@ -5,7 +5,6 @@ import './index.css'
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Overview from './pages/Overview';
-import Garantee from './pages/Garantee';
 import Policy from './pages/Policy';
 import { Provider } from 'react-redux';
 import { persistor, store } from './store/store';
@@ -27,7 +26,6 @@ createRoot(document.getElementById('root')!).render(
             <Route index element={<Home />} />
             <Route path="Login" element={<Login />} />
             <Route path="Policy" element={<Policy />} />
-            <Route path="Garantee" element={<Garantee />} />
             <Route path="Lectures" element={<Overview />} />
             <Route path="Lessons" element={<Lessons />} />
             <Route path=":lessonId" element={<LectureContent />} />
