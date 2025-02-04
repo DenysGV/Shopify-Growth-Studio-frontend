@@ -5,14 +5,10 @@ import LecturesSidebar from "../components/Lectures/LecturesSidebar/LecturesSide
 import useAppSelector from "../hooks/useAppSelector";
 import useNavigation from "../hooks/useNavigation";
 import useTimeOnSite from "../hooks/useTimeOnSite";
-import useAppDispatch from "../hooks/useAppDispatch";
-import { fetchArticles } from "../store/Lessons/lessonsSlice";
 
 const Lessons = () => {
    const { moveToPage } = useNavigation();
-   const lessons = useAppSelector((state) => state.root.lessons.items);
    const auth = useAppSelector((state) => state.root.auth);
-   const dispatch = useAppDispatch()
 
    if (auth.user?._id) {
       useTimeOnSite(auth.user?._id)
@@ -22,9 +18,6 @@ const Lessons = () => {
       if (!auth.isAuth) {
          moveToPage('Login')
       }
-      // if (!lessons) {
-      //    dispatch(fetchArticles)
-      // }
    }, [])
 
 
