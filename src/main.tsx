@@ -13,9 +13,10 @@ import { PersistGate } from 'redux-persist/integration/react';
 import LectureContent from './pages/LectureContent';
 import ReactPixel from 'react-facebook-pixel';
 
-ReactPixel.init('1512654709416043', undefined, { debug: true, autoConfig: false });
+ReactPixel.init('663580916008816', undefined, { debug: true, autoConfig: false });
 ReactPixel.pageView();
 ReactPixel.fbq('track', 'PageView');
+
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
